@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FFFFFF"
+    android:background="#0F172A"
     android:padding="24dp"
     tools:context=".ui.login.LoginActivity">
 
@@ -12,12 +12,12 @@
         android:id="@+id/text_logo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
-        android:letterSpacing="0.1"
+        android:layout_marginTop="80dp"
         android:text="Shape 8ao80"
-        android:textColor="#38BDF8"
-        android:textSize="32sp"
+        android:textColor="#FFFFFF"
+        android:textSize="36sp"
         android:textStyle="bold"
+        android:letterSpacing="0.05"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -27,9 +27,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="4dp"
-        android:text="SHAPE RAPIDO"
-        android:textColor="#94A3B8"
+        android:text="SHAPE RÁPIDO"
+        android:textColor="#38BDF8"
         android:textSize="14sp"
+        android:textStyle="bold"
+        android:letterSpacing="0.2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/text_logo" />
@@ -37,13 +39,14 @@
     <EditText
         android:id="@+id/edit_text_email"
         android:layout_width="0dp"
-        android:layout_height="48dp"
-        android:layout_marginTop="40dp"
-        android:backgroundTint="#38BDF8"
+        android:layout_height="55dp"
+        android:layout_marginTop="60dp"
+        android:backgroundTint="#1E293B"
         android:hint="Email"
         android:inputType="textEmailAddress"
+        android:paddingStart="16dp"
         android:textColor="#FFFFFF"
-        android:textColorHint="#94A3B8"
+        android:textColorHint="#64748B"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/text_subtitle" />
@@ -51,13 +54,14 @@
     <EditText
         android:id="@+id/edit_text_password"
         android:layout_width="0dp"
-        android:layout_height="48dp"
+        android:layout_height="55dp"
         android:layout_marginTop="16dp"
-        android:backgroundTint="#38BDF8"
+        android:backgroundTint="#1E293B"
         android:hint="Senha"
         android:inputType="textPassword"
+        android:paddingStart="16dp"
         android:textColor="#FFFFFF"
-        android:textColorHint="#94A3B8"
+        android:textColorHint="#64748B"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/edit_text_email" />
@@ -65,12 +69,14 @@
     <Button
         android:id="@+id/button_login"
         android:layout_width="0dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="24dp"
+        android:layout_height="56dp"
+        android:layout_marginTop="32dp"
         android:backgroundTint="#2563EB"
         android:text="ENTRAR"
         android:textColor="#FFFFFF"
         android:textStyle="bold"
+        android:textSize="16sp"
+        app:cornerRadius="12dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/edit_text_password" />
@@ -79,34 +85,31 @@
         android:id="@+id/registerLink"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:text="Criar conta"
-        android:textColor="#38BDF8"
+        android:layout_marginTop="20dp"
+        android:text="Não tem uma conta? Criar conta"
+        android:textColor="#94A3B8"
         android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/button_login" />
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="32dp"
+        android:background="#1E293B"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/registerLink" />
+
     <com.google.android.gms.common.SignInButton
         android:id="@+id/btnGoogleSignIn"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
-        android:text="Login com Google"
-        app:layout_constraintTop_toBottomOf="@id/registerLink"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        tools:ignore="MissingConstraints" />
-
-
-    <com.google.android.gms.common.SignInButton
-        android:id="@+id/btnGoogleSignIn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        android:text="Login com Google"
-        app:layout_constraintTop_toBottomOf="@id/registerLink"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        tools:ignore="MissingConstraints" />
+        app:layout_constraintTop_toBottomOf="@id/divider" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

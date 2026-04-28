@@ -1,103 +1,153 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="10dp"
-    tools:context=".ui.usuario.PerfilUsuarioFragment">
+    android:background="#0F172A"
+    android:fillViewport="true">
 
-    <TextView
-        android:id="@+id/textCadastroUsuarioTitle"
-        android:layout_width="wrap_content"
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:text="Perfil de Usuário"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:padding="24dp"
+        tools:context=".ui.usuario.PerfilUsuarioFragment">
 
-    <ImageView
-        android:id="@+id/userProfileImageView"
-        android:layout_width="150dp"
-        android:layout_height="150dp"
-        android:layout_marginTop="16dp"
-        android:src="@mipmap/ic_default_user"
-        app:layout_constraintTop_toBottomOf="@id/textCadastroUsuarioTitle"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:contentDescription="Foto de perfil"/>
+        <TextView
+            android:id="@+id/textCadastroUsuarioTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Meu Perfil"
+            android:textColor="#FFFFFF"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/profile_card"
+            android:layout_width="140dp"
+            android:layout_height="140dp"
+            android:layout_marginTop="24dp"
+            app:cardBackgroundColor="#1E293B"
+            app:cardCornerRadius="70dp"
+            app:strokeColor="#38BDF8"
+            app:strokeWidth="3dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textCadastroUsuarioTitle">
 
-    <EditText
-        android:id="@+id/registerNameEditText"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:hint="Nome"
-        android:layout_marginTop="16dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/userProfileImageView"/>
+            <ImageView
+                android:id="@+id/userProfileImageView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:contentDescription="Foto de perfil"
+                android:scaleType="centerCrop"
+                android:src="@mipmap/ic_default_user" />
+        </com.google.android.material.card.MaterialCardView>
 
-    <EditText
-        android:id="@+id/registerEmailEditText"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:hint="Email"
-        android:inputType="textEmailAddress"
-        app:layout_constraintTop_toBottomOf="@id/registerNameEditText"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"/>
+        <EditText
+            android:id="@+id/registerNameEditText"
+            android:layout_width="0dp"
+            android:layout_height="55dp"
+            android:layout_marginTop="32dp"
+            android:backgroundTint="#1E293B"
+            android:hint="Nome"
+            android:paddingStart="16dp"
+            android:textColor="#FFFFFF"
+            android:textColorHint="#64748B"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/profile_card" />
 
-    <EditText
-        android:id="@+id/registerEnderecoEditText"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:hint="Endereço"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/registerEmailEditText" />
+        <EditText
+            android:id="@+id/registerEmailEditText"
+            android:layout_width="0dp"
+            android:layout_height="55dp"
+            android:layout_marginTop="12dp"
+            android:backgroundTint="#1E293B"
+            android:hint="Email"
+            android:inputType="textEmailAddress"
+            android:paddingStart="16dp"
+            android:textColor="#FFFFFF"
+            android:textColorHint="#64748B"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/registerNameEditText" />
 
-    <EditText
-        android:id="@+id/registerPasswordEditText"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:hint="Senha"
-        android:inputType="textPassword"
-        app:layout_constraintTop_toBottomOf="@id/registerEnderecoEditText"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"/>
+        <EditText
+            android:id="@+id/registerEnderecoEditText"
+            android:layout_width="0dp"
+            android:layout_height="55dp"
+            android:layout_marginTop="12dp"
+            android:backgroundTint="#1E293B"
+            android:hint="Endereço"
+            android:paddingStart="16dp"
+            android:textColor="#FFFFFF"
+            android:textColorHint="#64748B"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/registerEmailEditText" />
 
-    <EditText
-        android:id="@+id/registerConfirmPasswordEditText"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:hint="Confirmar Senha"
-        android:inputType="textPassword"
-        app:layout_constraintTop_toBottomOf="@id/registerPasswordEditText"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"/>
+        <EditText
+            android:id="@+id/registerPasswordEditText"
+            android:layout_width="0dp"
+            android:layout_height="55dp"
+            android:layout_marginTop="12dp"
+            android:backgroundTint="#1E293B"
+            android:hint="Nova Senha"
+            android:inputType="textPassword"
+            android:paddingStart="16dp"
+            android:textColor="#FFFFFF"
+            android:textColorHint="#64748B"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/registerEnderecoEditText" />
 
-    <Button
-        android:id="@+id/salvarButton"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:text="Atualizar"
-        app:layout_constraintTop_toBottomOf="@id/registerConfirmPasswordEditText"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"/>
+        <EditText
+            android:id="@+id/registerConfirmPasswordEditText"
+            android:layout_width="0dp"
+            android:layout_height="55dp"
+            android:layout_marginTop="12dp"
+            android:backgroundTint="#1E293B"
+            android:hint="Confirmar Nova Senha"
+            android:inputType="textPassword"
+            android:paddingStart="16dp"
+            android:textColor="#FFFFFF"
+            android:textColorHint="#64748B"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/registerPasswordEditText" />
 
-    <Button
-        android:id="@+id/sairButton"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:text="Sair"
-        app:layout_constraintTop_toBottomOf="@id/salvarButton"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"/>
+        <Button
+            android:id="@+id/salvarButton"
+            android:layout_width="0dp"
+            android:layout_height="56dp"
+            android:layout_marginTop="32dp"
+            android:backgroundTint="#3B82F6"
+            android:text="ATUALIZAR DADOS"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            app:cornerRadius="12dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/registerConfirmPasswordEditText" />
 
+        <Button
+            android:id="@+id/sairButton"
+            style="@style/Widget.MaterialComponents.Button.TextButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="24dp"
+            android:text="Sair da Conta"
+            android:textColor="#EF4444"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/salvarButton" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>

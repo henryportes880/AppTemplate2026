@@ -1,67 +1,129 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.dashboard.DashboardFragment">
+    android:background="#0F172A"
+    android:fillViewport="true">
 
-
-    <TextView
-        android:id="@+id/text_dashboard"
-        android:layout_width="wrap_content"
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:textAlignment="center"
-        android:textSize="20sp"
-        android:text="Cadastro de ..."
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:padding="24dp"
+        tools:context=".ui.dashboard.DashboardFragment">
 
-    <ImageView
-        android:id="@+id/image_item"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginBottom="32dp"
-        android:contentDescription="Store Photo"
-        android:scaleType="centerCrop"
-        android:src="@android:drawable/gallery_thumb"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/text_dashboard" />
+        <TextView
+            android:id="@+id/text_dashboard"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Cadastro de Item"
+            android:textColor="#FFFFFF"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
-        android:id="@+id/button_select_image"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:text="Selecionar Imagem"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/image_item" />
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/image_card"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_marginTop="24dp"
+            app:cardBackgroundColor="#1E293B"
+            app:cardCornerRadius="75dp"
+            app:strokeColor="#38BDF8"
+            app:strokeWidth="2dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/text_dashboard">
 
+            <ImageView
+                android:id="@+id/image_item"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:contentDescription="Item Preview"
+                android:scaleType="centerCrop"
+                android:src="@android:drawable/ic_menu_camera"
+                android:tint="#38BDF8" />
+        </com.google.android.material.card.MaterialCardView>
 
-    <EditText
-        android:id="@+id/enderecoItemEditText"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:hint="Endereço"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/button_select_image" />
+        <Button
+            android:id="@+id/button_select_image"
+            style="@style/Widget.MaterialComponents.Button.TextButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="SELECIONAR IMAGEM"
+            android:textColor="#38BDF8"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/image_card" />
 
+        <EditText
+            android:id="@+id/enderecoItemEditText"
+            android:layout_width="0dp"
+            android:layout_height="55dp"
+            android:layout_marginTop="24dp"
+            android:backgroundTint="#1E293B"
+            android:hint="Endereço ou Localização"
+            android:paddingStart="16dp"
+            android:textColor="#FFFFFF"
+            android:textColorHint="#64748B"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/button_select_image" />
 
-    <Button
-        android:id="@+id/salvarItemButton"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:text="Salvar"
-        app:layout_constraintTop_toBottomOf="@id/enderecoItemEditText"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"/>
+        <EditText
+            android:id="@+id/nomeItemEditText"
+            android:layout_width="0dp"
+            android:layout_height="55dp"
+            android:layout_marginTop="16dp"
+            android:backgroundTint="#1E293B"
+            android:hint="Nome do Item"
+            android:inputType="text"
+            android:paddingStart="16dp"
+            android:textColor="#FFFFFF"
+            android:textColorHint="#64748B"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/enderecoItemEditText" />
 
+        <EditText
+            android:id="@+id/descricaoItemEditText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:backgroundTint="#1E293B"
+            android:gravity="top"
+            android:hint="Descrição detalhada"
+            android:inputType="textMultiLine"
+            android:minLines="3"
+            android:padding="16dp"
+            android:textColor="#FFFFFF"
+            android:textColorHint="#64748B"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/nomeItemEditText" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <Button
+            android:id="@+id/salvarItemButton"
+            android:layout_width="0dp"
+            android:layout_height="56dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginBottom="24dp"
+            android:backgroundTint="#3B82F6"
+            android:text="SALVAR ITEM"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:cornerRadius="12dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/descricaoItemEditText" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>
