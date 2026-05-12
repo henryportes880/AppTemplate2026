@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#0F172A"
+    android:background="#111827"
     android:fillViewport="true">
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -19,8 +20,8 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             android:text="Cadastro de Item"
-            android:textColor="#FFFFFF"
-            android:textSize="24sp"
+            android:textColor="#F9FAFB"
+            android:textSize="28sp"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -28,13 +29,14 @@
 
         <com.google.android.material.card.MaterialCardView
             android:id="@+id/image_card"
-            android:layout_width="150dp"
-            android:layout_height="150dp"
-            android:layout_marginTop="24dp"
-            app:cardBackgroundColor="#1E293B"
-            app:cardCornerRadius="75dp"
-            app:strokeColor="#38BDF8"
-            app:strokeWidth="2dp"
+            android:layout_width="160dp"
+            android:layout_height="160dp"
+            android:layout_marginTop="28dp"
+            app:cardBackgroundColor="#1F2937"
+            app:cardCornerRadius="80dp"
+            app:cardElevation="8dp"
+            app:strokeColor="#60A5FA"
+            app:strokeWidth="3dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/text_dashboard">
@@ -46,7 +48,7 @@
                 android:contentDescription="Item Preview"
                 android:scaleType="centerCrop"
                 android:src="@android:drawable/ic_menu_camera"
-                android:tint="#38BDF8" />
+                android:tint="#60A5FA" />
         </com.google.android.material.card.MaterialCardView>
 
         <Button
@@ -54,9 +56,11 @@
             style="@style/Widget.MaterialComponents.Button.TextButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:text="SELECIONAR IMAGEM"
-            android:textColor="#38BDF8"
+            android:layout_marginTop="12dp"
+            android:text="Selecionar Imagem"
+            android:textAllCaps="false"
+            android:textColor="#93C5FD"
+            android:textSize="15sp"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -65,13 +69,13 @@
         <EditText
             android:id="@+id/enderecoItemEditText"
             android:layout_width="0dp"
-            android:layout_height="55dp"
-            android:layout_marginTop="24dp"
-            android:backgroundTint="#1E293B"
+            android:layout_height="56dp"
+            android:layout_marginTop="28dp"
+            android:backgroundTint="#374151"
             android:hint="Endereço ou Localização"
             android:paddingStart="16dp"
             android:textColor="#FFFFFF"
-            android:textColorHint="#64748B"
+            android:textColorHint="#9CA3AF"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/button_select_image" />
@@ -79,14 +83,14 @@
         <EditText
             android:id="@+id/nomeItemEditText"
             android:layout_width="0dp"
-            android:layout_height="55dp"
+            android:layout_height="56dp"
             android:layout_marginTop="16dp"
-            android:backgroundTint="#1E293B"
+            android:backgroundTint="#374151"
             android:hint="Nome do Item"
             android:inputType="text"
             android:paddingStart="16dp"
             android:textColor="#FFFFFF"
-            android:textColorHint="#64748B"
+            android:textColorHint="#9CA3AF"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/enderecoItemEditText" />
@@ -96,14 +100,14 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
-            android:backgroundTint="#1E293B"
+            android:backgroundTint="#374151"
             android:gravity="top"
             android:hint="Descrição detalhada"
             android:inputType="textMultiLine"
-            android:minLines="3"
+            android:minLines="4"
             android:padding="16dp"
             android:textColor="#FFFFFF"
-            android:textColorHint="#64748B"
+            android:textColorHint="#9CA3AF"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/nomeItemEditText" />
@@ -111,19 +115,21 @@
         <Button
             android:id="@+id/salvarItemButton"
             android:layout_width="0dp"
-            android:layout_height="56dp"
-            android:layout_marginTop="32dp"
+            android:layout_height="58dp"
+            android:layout_marginTop="36dp"
             android:layout_marginBottom="24dp"
-            android:backgroundTint="#3B82F6"
-            android:text="SALVAR ITEM"
+            android:backgroundTint="#2563EB"
+            android:text="Salvar Item"
+            android:textAllCaps="false"
             android:textColor="#FFFFFF"
-            android:textSize="16sp"
+            android:textSize="17sp"
             android:textStyle="bold"
-            app:cornerRadius="12dp"
+            app:cornerRadius="14dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/descricaoItemEditText" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
+
 </androidx.core.widget.NestedScrollView>

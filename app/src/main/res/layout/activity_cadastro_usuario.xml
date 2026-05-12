@@ -1,122 +1,139 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#0F172A"
-    android:padding="24dp"
+    android:background="#111827"
+    android:padding="28dp"
     tools:context=".ui.usuario.CadastroUsuarioActivity">
 
+    <!-- TÍTULO -->
     <TextView
         android:id="@+id/textCadastroUsuarioTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="60dp"
+        android:layout_marginTop="70dp"
         android:text="Nova Conta"
-        android:textColor="#FFFFFF"
-        android:textSize="32sp"
+        android:textColor="#F9FAFB"
+        android:textSize="34sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <!-- SUBTÍTULO -->
     <TextView
         android:id="@+id/textSub"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="10dp"
         android:text="Preencha os dados abaixo"
-        android:textColor="#38BDF8"
-        android:textSize="14sp"
-        android:letterSpacing="0.05"
+        android:textColor="#60A5FA"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:letterSpacing="0.08"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/textCadastroUsuarioTitle" />
 
+    <!-- NOME -->
     <EditText
         android:id="@+id/registerNameEditText"
         android:layout_width="0dp"
-        android:layout_height="55dp"
-        android:layout_marginTop="48dp"
-        android:background="@android:drawable/editbox_background_normal"
-        android:backgroundTint="#1E293B"
+        android:layout_height="58dp"
+        android:layout_marginTop="50dp"
+        android:backgroundTint="#374151"
         android:hint="Nome Completo"
-        android:paddingStart="16dp"
+        android:paddingStart="18dp"
         android:textColor="#FFFFFF"
-        android:textColorHint="#64748B"
+        android:textColorHint="#9CA3AF"
+        android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/textSub" />
 
+    <!-- EMAIL -->
     <EditText
         android:id="@+id/registerEmailEditText"
         android:layout_width="0dp"
-        android:layout_height="55dp"
+        android:layout_height="58dp"
         android:layout_marginTop="16dp"
-        android:backgroundTint="#1E293B"
+        android:backgroundTint="#374151"
         android:hint="Email"
         android:inputType="textEmailAddress"
-        android:paddingStart="16dp"
+        android:paddingStart="18dp"
         android:textColor="#FFFFFF"
-        android:textColorHint="#64748B"
+        android:textColorHint="#9CA3AF"
+        android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/registerNameEditText" />
 
+    <!-- SENHA -->
     <EditText
         android:id="@+id/registerPasswordEditText"
         android:layout_width="0dp"
-        android:layout_height="55dp"
+        android:layout_height="58dp"
         android:layout_marginTop="16dp"
-        android:backgroundTint="#1E293B"
+        android:backgroundTint="#374151"
         android:hint="Senha"
         android:inputType="textPassword"
-        android:paddingStart="16dp"
+        android:paddingStart="18dp"
         android:textColor="#FFFFFF"
-        android:textColorHint="#64748B"
+        android:textColorHint="#9CA3AF"
+        android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/registerEmailEditText" />
 
+    <!-- CONFIRMAR SENHA -->
     <EditText
         android:id="@+id/registerConfirmPasswordEditText"
         android:layout_width="0dp"
-        android:layout_height="55dp"
+        android:layout_height="58dp"
         android:layout_marginTop="16dp"
-        android:backgroundTint="#1E293B"
+        android:backgroundTint="#374151"
         android:hint="Confirmar Senha"
         android:inputType="textPassword"
-        android:paddingStart="16dp"
+        android:paddingStart="18dp"
         android:textColor="#FFFFFF"
-        android:textColorHint="#64748B"
+        android:textColorHint="#9CA3AF"
+        android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/registerPasswordEditText" />
 
+    <!-- BOTÃO CADASTRAR -->
     <Button
         android:id="@+id/salvarButton"
         android:layout_width="0dp"
-        android:layout_height="56dp"
-        android:layout_marginTop="32dp"
-        android:backgroundTint="#3B82F6"
-        android:text="CADASTRAR AGORA"
+        android:layout_height="58dp"
+        android:layout_marginTop="36dp"
+        android:backgroundTint="#2563EB"
+        android:text="Cadastrar agora"
+        android:textAllCaps="false"
         android:textColor="#FFFFFF"
-        android:textSize="16sp"
+        android:textSize="17sp"
         android:textStyle="bold"
-        app:cornerRadius="12dp"
+        app:cornerRadius="14dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/registerConfirmPasswordEditText" />
 
+    <!-- LINK LOGIN -->
     <Button
         android:id="@+id/sairButton"
         style="@style/Widget.MaterialComponents.Button.TextButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="10dp"
         android:text="Já tenho uma conta. Entrar"
-        android:textColor="#94A3B8"
+        android:textAllCaps="false"
+        android:textColor="#D1D5DB"
+        android:textSize="15sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/salvarButton" />

@@ -1,113 +1,126 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#0F172A"
-    android:padding="24dp"
+    android:background="#111827"
+    android:padding="28dp"
     tools:context=".ui.login.LoginActivity">
 
+    <!-- LOGO -->
     <TextView
         android:id="@+id/text_logo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="80dp"
+        android:layout_marginTop="90dp"
         android:text="Shape 8ao80"
-        android:textColor="#FFFFFF"
-        android:textSize="36sp"
+        android:textColor="#F9FAFB"
+        android:textSize="40sp"
         android:textStyle="bold"
-        android:letterSpacing="0.05"
+        android:letterSpacing="0.06"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <!-- SUBTÍTULO -->
     <TextView
         android:id="@+id/text_subtitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="4dp"
+        android:layout_marginTop="6dp"
         android:text="SHAPE RÁPIDO"
-        android:textColor="#38BDF8"
-        android:textSize="14sp"
+        android:textColor="#60A5FA"
+        android:textSize="15sp"
         android:textStyle="bold"
-        android:letterSpacing="0.2"
+        android:letterSpacing="0.25"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/text_logo" />
 
+    <!-- EMAIL -->
     <EditText
         android:id="@+id/edit_text_email"
         android:layout_width="0dp"
-        android:layout_height="55dp"
-        android:layout_marginTop="60dp"
-        android:backgroundTint="#1E293B"
-        android:hint="Email"
+        android:layout_height="58dp"
+        android:layout_marginTop="70dp"
+        android:backgroundTint="#374151"
+        android:hint="Digite seu email"
         android:inputType="textEmailAddress"
-        android:paddingStart="16dp"
+        android:paddingStart="18dp"
         android:textColor="#FFFFFF"
-        android:textColorHint="#64748B"
+        android:textColorHint="#9CA3AF"
+        android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/text_subtitle" />
 
+    <!-- SENHA -->
     <EditText
         android:id="@+id/edit_text_password"
         android:layout_width="0dp"
-        android:layout_height="55dp"
-        android:layout_marginTop="16dp"
-        android:backgroundTint="#1E293B"
-        android:hint="Senha"
+        android:layout_height="58dp"
+        android:layout_marginTop="18dp"
+        android:backgroundTint="#374151"
+        android:hint="Digite sua senha"
         android:inputType="textPassword"
-        android:paddingStart="16dp"
+        android:paddingStart="18dp"
         android:textColor="#FFFFFF"
-        android:textColorHint="#64748B"
+        android:textColorHint="#9CA3AF"
+        android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/edit_text_email" />
 
+    <!-- BOTÃO LOGIN -->
     <Button
         android:id="@+id/button_login"
         android:layout_width="0dp"
-        android:layout_height="56dp"
-        android:layout_marginTop="32dp"
+        android:layout_height="58dp"
+        android:layout_marginTop="36dp"
         android:backgroundTint="#2563EB"
-        android:text="ENTRAR"
+        android:text="Entrar"
+        android:textAllCaps="false"
         android:textColor="#FFFFFF"
+        android:textSize="17sp"
         android:textStyle="bold"
-        android:textSize="16sp"
-        app:cornerRadius="12dp"
+        app:cornerRadius="14dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/edit_text_password" />
 
+    <!-- LINK CADASTRO -->
     <TextView
         android:id="@+id/registerLink"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="22dp"
         android:text="Não tem uma conta? Criar conta"
-        android:textColor="#94A3B8"
-        android:textSize="14sp"
+        android:textColor="#D1D5DB"
+        android:textSize="15sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/button_login" />
 
+    <!-- DIVISOR -->
     <View
         android:id="@+id/divider"
         android:layout_width="0dp"
         android:layout_height="1dp"
-        android:layout_marginTop="32dp"
-        android:background="#1E293B"
+        android:layout_marginTop="36dp"
+        android:background="#374151"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/registerLink" />
 
+    <!-- GOOGLE LOGIN -->
     <com.google.android.gms.common.SignInButton
         android:id="@+id/btnGoogleSignIn"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="28dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/divider" />

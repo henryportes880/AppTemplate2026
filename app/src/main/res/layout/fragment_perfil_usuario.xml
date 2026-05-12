@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#0F172A"
+    android:background="#111827"
     android:fillViewport="true">
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -13,27 +14,30 @@
         android:padding="24dp"
         tools:context=".ui.usuario.PerfilUsuarioFragment">
 
+        <!-- TÍTULO -->
         <TextView
             android:id="@+id/textCadastroUsuarioTitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
             android:text="Meu Perfil"
-            android:textColor="#FFFFFF"
-            android:textSize="28sp"
+            android:textColor="#F9FAFB"
+            android:textSize="30sp"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
+        <!-- FOTO PERFIL -->
         <com.google.android.material.card.MaterialCardView
             android:id="@+id/profile_card"
-            android:layout_width="140dp"
-            android:layout_height="140dp"
-            android:layout_marginTop="24dp"
-            app:cardBackgroundColor="#1E293B"
-            app:cardCornerRadius="70dp"
-            app:strokeColor="#38BDF8"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_marginTop="28dp"
+            app:cardBackgroundColor="#1F2937"
+            app:cardCornerRadius="75dp"
+            app:cardElevation="10dp"
+            app:strokeColor="#60A5FA"
             app:strokeWidth="3dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -48,106 +52,124 @@
                 android:src="@mipmap/ic_default_user" />
         </com.google.android.material.card.MaterialCardView>
 
+        <!-- NOME -->
         <EditText
             android:id="@+id/registerNameEditText"
             android:layout_width="0dp"
-            android:layout_height="55dp"
-            android:layout_marginTop="32dp"
-            android:backgroundTint="#1E293B"
+            android:layout_height="56dp"
+            android:layout_marginTop="36dp"
+            android:backgroundTint="#374151"
             android:hint="Nome"
             android:paddingStart="16dp"
             android:textColor="#FFFFFF"
-            android:textColorHint="#64748B"
+            android:textColorHint="#9CA3AF"
+            android:textSize="16sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/profile_card" />
 
+        <!-- EMAIL -->
         <EditText
             android:id="@+id/registerEmailEditText"
             android:layout_width="0dp"
-            android:layout_height="55dp"
-            android:layout_marginTop="12dp"
-            android:backgroundTint="#1E293B"
+            android:layout_height="56dp"
+            android:layout_marginTop="14dp"
+            android:backgroundTint="#374151"
             android:hint="Email"
             android:inputType="textEmailAddress"
             android:paddingStart="16dp"
             android:textColor="#FFFFFF"
-            android:textColorHint="#64748B"
+            android:textColorHint="#9CA3AF"
+            android:textSize="16sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/registerNameEditText" />
 
+        <!-- ENDEREÇO -->
         <EditText
             android:id="@+id/registerEnderecoEditText"
             android:layout_width="0dp"
-            android:layout_height="55dp"
-            android:layout_marginTop="12dp"
-            android:backgroundTint="#1E293B"
+            android:layout_height="56dp"
+            android:layout_marginTop="14dp"
+            android:backgroundTint="#374151"
             android:hint="Endereço"
             android:paddingStart="16dp"
             android:textColor="#FFFFFF"
-            android:textColorHint="#64748B"
+            android:textColorHint="#9CA3AF"
+            android:textSize="16sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/registerEmailEditText" />
 
+        <!-- SENHA -->
         <EditText
             android:id="@+id/registerPasswordEditText"
             android:layout_width="0dp"
-            android:layout_height="55dp"
-            android:layout_marginTop="12dp"
-            android:backgroundTint="#1E293B"
+            android:layout_height="56dp"
+            android:layout_marginTop="14dp"
+            android:backgroundTint="#374151"
             android:hint="Nova Senha"
             android:inputType="textPassword"
             android:paddingStart="16dp"
             android:textColor="#FFFFFF"
-            android:textColorHint="#64748B"
+            android:textColorHint="#9CA3AF"
+            android:textSize="16sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/registerEnderecoEditText" />
 
+        <!-- CONFIRMAR SENHA -->
         <EditText
             android:id="@+id/registerConfirmPasswordEditText"
             android:layout_width="0dp"
-            android:layout_height="55dp"
-            android:layout_marginTop="12dp"
-            android:backgroundTint="#1E293B"
+            android:layout_height="56dp"
+            android:layout_marginTop="14dp"
+            android:backgroundTint="#374151"
             android:hint="Confirmar Nova Senha"
             android:inputType="textPassword"
             android:paddingStart="16dp"
             android:textColor="#FFFFFF"
-            android:textColorHint="#64748B"
+            android:textColorHint="#9CA3AF"
+            android:textSize="16sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/registerPasswordEditText" />
 
+        <!-- BOTÃO -->
         <Button
             android:id="@+id/salvarButton"
             android:layout_width="0dp"
-            android:layout_height="56dp"
-            android:layout_marginTop="32dp"
-            android:backgroundTint="#3B82F6"
-            android:text="ATUALIZAR DADOS"
+            android:layout_height="58dp"
+            android:layout_marginTop="36dp"
+            android:backgroundTint="#2563EB"
+            android:text="Atualizar Dados"
+            android:textAllCaps="false"
             android:textColor="#FFFFFF"
+            android:textSize="17sp"
             android:textStyle="bold"
-            app:cornerRadius="12dp"
+            app:cornerRadius="14dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/registerConfirmPasswordEditText" />
 
+        <!-- SAIR -->
         <Button
             android:id="@+id/sairButton"
             style="@style/Widget.MaterialComponents.Button.TextButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="18dp"
             android:layout_marginBottom="24dp"
             android:text="Sair da Conta"
-            android:textColor="#EF4444"
+            android:textAllCaps="false"
+            android:textColor="#F87171"
+            android:textSize="15sp"
+            android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/salvarButton" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
+
 </androidx.core.widget.NestedScrollView>
